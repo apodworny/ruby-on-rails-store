@@ -1,4 +1,6 @@
 Store::Application.routes.draw do
+  resources :weapons
+
   # The priority is based upon order of creation:
   # first created -> highest priority.
 

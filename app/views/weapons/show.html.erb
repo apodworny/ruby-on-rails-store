@@ -1,0 +1,50 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <b>Id:</b>
+  <%= @weapon.id %>
+</p>
+
+<p>
+  <b>Name:</b>
+  <%= @weapon.name %>
+</p>
+
+<p>
+  <b>Reloadtime:</b>
+  <%= @weapon.reloadtime %>
+</p>
+
+<p>
+  <b>Firerate:</b>
+  <%= @weapon.firerate %>
+</p>
+
+<p>
+  <b>Magazinesize:</b>
+  <%= @weapon.magazinesize %>
+</p>
+
+<p>
+  <b>Damage:</b>
+  <%= @weapon.damage %>
+</p>
+
+<p>
+  <b>Type:</b>
+  <%= @weapon.type %>
+</p>
+
+<p>
+  <b>Image:</b>
+  <%= @weapon.image %>
+</p>
+
+<p>
+  <b>Created at:</b>
+  <%= @weapon.created_at %>
+</p>
+
+
+<%= link_to 'Edit', edit_weapon_path(@weapon) %> |
+<%= link_to 'Back', weapons_path %>
