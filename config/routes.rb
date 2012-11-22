@@ -1,5 +1,7 @@
 Store::Application.routes.draw do
   resources :weapons
+  
+  root :to => "weapons#index"
 
   # The priority is based upon order of creation:
   # first created -> highest priority.
