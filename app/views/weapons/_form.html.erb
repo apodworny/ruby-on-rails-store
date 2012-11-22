@@ -43,10 +43,14 @@
     <%= f.label :image %><br />
     <%= f.text_field :image %>
   </div>
+  <!--
+  Took the commented stuff out as we want the create_at
+  column to automatically update when a new weapon
+  is put into the database.
   <div class="field">
-    <%= f.label :created_at %><br />
-    <%= f.datetime_select :created_at %>
-  </div>
+    %= f.label :created_at %<br />
+    %= f.datetime_select :created_at % 
+  </div>-->
   <div class="actions">
     <%= f.submit %>
   </div>
