@@ -12,10 +12,6 @@
   <% end %>
 
   <div class="field">
-    <%= f.label :id %><br />
-    <%= f.number_field :id %>
-  </div>
-  <div class="field">
     <%= f.label :name %><br />
     <%= f.text_field :name %>
   </div>
@@ -36,21 +32,13 @@
     <%= f.number_field :damage %>
   </div>
   <div class="field">
-    <%= f.label :type %><br />
-    <%= f.text_field :type %>
-  </div>
-  <div class="field">
     <%= f.label :image %><br />
     <%= f.text_field :image %>
   </div>
-  <!--
-  Took the commented stuff out as we want the create_at
-  column to automatically update when a new weapon
-  is put into the database.
   <div class="field">
-    %= f.label :created_at %<br />
-    %= f.datetime_select :created_at % 
-  </div>-->
+    <%= f.label :type_id %><br />
+    <%= f.collection_select :type_id, Type.all, :id, :name %>
+  </div>
   <div class="actions">
     <%= f.submit %>
   </div>

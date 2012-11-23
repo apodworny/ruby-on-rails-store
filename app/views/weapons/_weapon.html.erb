@@ -1,0 +1,58 @@
+<div class="weapon">
+  <div class="actions">
+    <%= link_to 'edit', edit_weapon_path(weapon) %>
+    <%= link_to 'x', weapon, :method => :delete, :confirm => "Are you sure you want to delete #{weapon.name}?" %>
+  </div>
+  
+  <p>
+  <b>Id:</b>
+  <%= @weapon.id %>
+</p>
+
+<p>
+  <b>Name:</b>
+  <%= @weapon.name %>
+</p>
+
+<p>
+  <b>Reloadtime:</b>
+  <%= @weapon.reloadtime %>
+</p>
+
+<p>
+  <b>Firerate:</b>
+  <%= @weapon.firerate %>
+</p>
+
+<p>
+  <b>Magazinesize:</b>
+  <%= @weapon.magazinesize %>
+</p>
+
+<p>
+  <b>Damage:</b>
+  <%= @weapon.damage %>
+</p>
+<p>
+  <b>Type_id:</b>
+  <%= @weapon.type_id %>
+</p>
+
+<p>
+  <b>Image:</b>
+  <% if weapon.image.present? %>
+    <p>
+      <%= image_tag weapon.image %>
+    </p>
+  <% else %>
+    <p class="no_image">
+      <em>No weapon image.</em>
+    </p>
+  <% end %>
+</p>
+
+<p>
+  <b>Created at:</b>
+  <%= @weapon.created_at %>
+</p>
+</div>

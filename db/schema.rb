@@ -11,7 +11,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20121122015938) do
+ActiveRecord::Schema.define(:version => 20121122154835) do
 
   create_table "types", :force => true do |t|
     t.string   "name"
@@ -26,10 +26,10 @@ ActiveRecord::Schema.define(:version => 20121122015938) do
     t.decimal  "firerate"
     t.integer  "magazinesize"
     t.integer  "damage"
-    t.string   "type"
     t.string   "image"
     t.datetime "created_at",   :null => false
     t.datetime "updated_at",   :null => false
+    t.integer  "type_id"
   end
 
 end
