@@ -9,7 +9,7 @@ Store::Application.routes.draw do
   
   match "weapons" => "weapons#index", :as => 'weapons', :via => :get
   
-  root :to => "frontend#index"
+  root :to => "frontEnds#index"
   
 
   # The priority is based upon order of creation:
