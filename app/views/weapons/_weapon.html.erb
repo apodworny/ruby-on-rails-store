@@ -1,42 +1,38 @@
-<div class="weapon">
-  <div class="actions">
-    <%= link_to 'edit', edit_weapon_path(weapon) %>
-    <%= link_to 'x', weapon, :method => :delete, :confirm => "Are you sure you want to delete #{weapon.name}?" %>
-  </div>
-  
+<div class="weapon">  
   <p>
   <b>Id:</b>
-  <%= @weapon.id %>
+  <%= weapon.id %>
 </p>
 
 <p>
   <b>Name:</b>
-  <%= @weapon.name %>
+  <%= weapon.name %>
 </p>
 
 <p>
   <b>Reloadtime:</b>
-  <%= @weapon.reloadtime %>
+  <%= weapon.reloadtime %>
 </p>
 
 <p>
   <b>Firerate:</b>
-  <%= @weapon.firerate %>
+  <%= weapon.firerate %>
 </p>
 
 <p>
   <b>Magazinesize:</b>
-  <%= @weapon.magazinesize %>
+  <%= weapon.magazinesize %>
 </p>
 
 <p>
   <b>Damage:</b>
-  <%= @weapon.damage %>
+  <%= weapon.damage %>
 </p>
 <p>
-  <b>Type_id:</b>
-  <%= @weapon.type_id %>
+  <b>Type:</b>
+  <%= weapon.type.name %>
 </p>
+
 
 <p>
   <b>Image:</b>
@@ -53,6 +49,6 @@
 
 <p>
   <b>Created at:</b>
-  <%= @weapon.created_at %>
+  <%= weapon.created_at %>
 </p>
 </div>

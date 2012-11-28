@@ -1,21 +1,5 @@
-<h1>Listing front_ends</h1>
+<h1>Welcome to the Cross Fire Black Market</h1>
 
-<table>
-  <tr>
-    <th></th>
-    <th></th>
-    <th></th>
-  </tr>
-
-<% @front_ends.each do |front_end| %>
-  <tr>
-    <td><%= link_to 'Show', front_end %></td>
-    <td><%= link_to 'Edit', edit_front_end_path(front_end) %></td>
-    <td><%= link_to 'Destroy', front_end, method: :delete, data: { confirm: 'Are you sure?' } %></td>
-  </tr>
-<% end %>
-</table>
-
-<br />
-
-<%= link_to 'New Front end', new_front_end_path %>
+<div>
+  <%= render @weapons %>
+</div>
