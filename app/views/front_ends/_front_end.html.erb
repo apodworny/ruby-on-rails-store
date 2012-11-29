@@ -1,26 +1,25 @@
-<div class="weapon">  
-  <p>
+<div class="weaponf">  
+  <!--<p>
     <b>Id:</b>
-    <%= weapon.id %>
-  </p>
+    %= weapon.id %
+  </p>-->
 
   <p>
-    <b>Name:</b>
-    <%= weapon.name %>
+    <h2><%= weapon.name %></h2>
   </p>
   
   <p>
-    <b>Reloadtime:</b>
+    <b>Reload Time:</b>
     <%= weapon.reloadtime %>
   </p>
   
   <p>
-    <b>Firerate:</b>
+    <b>Fire Rate:</b>
     <%= weapon.firerate %>
   </p>
   
   <p>
-    <b>Magazinesize:</b>
+    <b>Magazine Size:</b>
     <%= weapon.magazinesize %>
   </p>
   
@@ -35,7 +34,6 @@
   
   
   <p>
-    <b>Image:</b>
     <% if weapon.image.present? %>
       <p>
         <%= image_tag weapon.image %>
@@ -47,8 +45,8 @@
     <% end %>
   </p>
   
-  <p>
+  <!--<p>
     <b>Created at:</b>
-    <%= weapon.created_at %>
-  </p>
+    %= weapon.created_at %
+</p>-->
 </div>
