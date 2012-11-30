@@ -8,16 +8,11 @@ Store::Application.routes.draw do
   resources :weapons
   
   resources :types
-  
-  match "types" => "types#index", :as => 'types', :via => :get
-  
-  match "weapons" => "weapons#index", :as => 'weapons', :via => :get
-  
+
   root :to => "frontEnds#index", :as => 'front_end'
   
-  match "weapons/typeslist/:id" => 'front_ends#typeslist', :as => 'type', :via => :get
+  match "weapons/typeslist/:id" => 'frontEnds#typeslist', :as => 'type', :via => :get
   
-
   # The priority is based upon order of creation:
   # first created -> highest priority.
 
