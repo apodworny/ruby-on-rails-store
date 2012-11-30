@@ -9,4 +9,8 @@ class FrontEndsController < ApplicationController
       format.json { render json: @front_ends }
     end
   end
+  
+  def typeslist
+    @types = Types.all
+  end
 end

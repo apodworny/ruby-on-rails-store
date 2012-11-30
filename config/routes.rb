@@ -1,4 +1,8 @@
 Store::Application.routes.draw do
+  ActiveAdmin.routes(self)
+
+  devise_for :admin_users, ActiveAdmin::Devise.config
+
   resources :front_ends
 
   resources :weapons
@@ -10,6 +14,8 @@ Store::Application.routes.draw do
   match "weapons" => "weapons#index", :as => 'weapons', :via => :get
   
   root :to => "frontEnds#index", :as => 'front_end'
+  
+  match "weapons/typeslist/:id" => 'front_ends#typeslist', :as => 'type', :via => :get
   
 
   # The priority is based upon order of creation:
