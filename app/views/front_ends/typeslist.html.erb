@@ -1,7 +1,12 @@
 <div id="container">
-  <h1><%= @type.name %></h1>
-  <%= link_to 'Back', front_ends_path %>
+  <header>
+    <h1><%= @type.name %></h1>
+  </header>
   <div class="content">
     <%= render :partial => 'front_end', :collection => @type.weapons, :as => 'weapon' %>
   </div>
+  <div class="clear" />
+  <footer>
+    <%= link_to 'Back', front_ends_path %>
+  </footer>
 </div>
