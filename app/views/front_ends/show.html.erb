@@ -2,7 +2,7 @@
   <div id="weapon-name">
     <h1><%= @weapon.name %></h1>
   </div>
-  <table border="5" cellspacing="20px" cellpadding="10px" id="show-table">
+  <table id="show-table">
     <tr>
       <td>Reload Time</td>
       <td>Fire Rate</td>
@@ -20,16 +20,15 @@
   </table>
   
   
-  <p>
-    <% if @weapon.image.present? %>
-      <p id="show-image">
-        <%= image_tag @weapon.image %>
-      </p>
-    <% else %>
-      <p class="no_image">
-        <em>No weapon image.</em>
-      </p>
-    <% end %>
-  </p>
+  <% if @weapon.image.present? %>
+    <p id="show-image">
+      <%= image_tag @weapon.image %>
+    </p>
+  <% else %>
+    <p class="no_image">
+      <em>No weapon image.</em>
+    </p>
+  <% end %>
+    
   <%= link_to 'Back', front_ends_path %>
 </div>

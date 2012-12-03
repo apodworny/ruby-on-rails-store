@@ -1,8 +1,6 @@
 <div class="weaponf">  
 
-  <p>
-    <h2><%= link_to weapon.name, weapon_path(weapon) %></h2>
-  </p>
+  <h2><%= link_to weapon.name, weapon_path(weapon) %></h2>
   
   <p>
     <b>Damage:</b>
@@ -14,16 +12,14 @@
   </p>
   
   
-  <p>
-    <% if weapon.image.present? %>
-      <p>
-        <%= image_tag weapon.image %>
-      </p>
-    <% else %>
-      <p class="no_image">
-        <em>No weapon image.</em>
-      </p>
-    <% end %>
-  </p>
+  <% if weapon.image.present? %>
+    <p>
+      <%= image_tag weapon.image %>
+    </p>
+  <% else %>
+    <p class="no_image">
+      <em>No weapon image.</em>
+    </p>
+  <% end %>
   
 </div>
