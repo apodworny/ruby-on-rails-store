@@ -13,6 +13,9 @@ class FrontEndsController < ApplicationController
   
   def typeslist
     @type = Type.find(params[:id])
-    #use this in a view, Type.weapon or whatever? not sure
+  end
+  
+  def show
+    @weapon = Weapon.find(params[:id])
   end
 end

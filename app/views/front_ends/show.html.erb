@@ -1,5 +1,35 @@
-<p id="notice"><%= notice %></p>
-
-
-<%= link_to 'Edit', edit_front_end_path(@front_end) %> |
-<%= link_to 'Back', front_ends_path %>
+<div class="show-weapon">
+  <div id="weapon-name">
+    <h1><%= @weapon.name %></h1>
+  </div>
+  <table border="5" cellspacing="20px" cellpadding="10px" id="show-table">
+    <tr>
+      <td>Reload Time</td>
+      <td>Fire Rate</td>
+      <td>Magazine Size</td>
+      <td>Damage</td>
+      <td>Type</td>
+    </tr>
+    <tr>
+      <td><%= @weapon.reloadtime %></td>
+      <td><%= @weapon.firerate %></td>
+      <td><%= @weapon.magazinesize %></td>
+      <td><%= @weapon.damage %></td>
+      <td><%= @weapon.type.name %></td>
+    </tr>
+  </table>
+  
+  
+  <p>
+    <% if @weapon.image.present? %>
+      <p id="show-image">
+        <%= image_tag @weapon.image %>
+      </p>
+    <% else %>
+      <p class="no_image">
+        <em>No weapon image.</em>
+      </p>
+    <% end %>
+  </p>
+  <%= link_to 'Back', front_ends_path %>
+</div>

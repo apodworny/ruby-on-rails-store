@@ -3,6 +3,8 @@ Store::Application.routes.draw do
 
   devise_for :admin_users, ActiveAdmin::Devise.config
 
+  match "weapons/:id" => 'frontEnds#show', :as => 'weapon', :via => :get
+
   resources :front_ends
 
   resources :weapons
