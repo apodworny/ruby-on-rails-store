@@ -1,3 +1,7 @@
+== Ruby On Rails Store
+
+This is a store I made for a Ruby On Rails class in Red River College, in 2012. This was my first time using Github (and git), so I've definitely improved since then.
+
 == Welcome to Rails
 
 Rails is a web-application framework that includes everything needed to create
